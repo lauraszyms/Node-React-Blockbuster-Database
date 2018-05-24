@@ -1,24 +1,23 @@
 # Welcome to Deep 6 Blockbuster!
 
-In this coding challenge, we will be asking you to bring Blockbuster back from the dead. You will be required to set up a server, seed dummy data, create a RESTful API to read fromt / write to the movie inventory, and render basic UI views.
+In this coding challenge, we will be asking you to bring Blockbuster back from the dead. You will be required to set up a server, create a RESTful API to read fromt / write to the movie "inventory", and render basic UI views.
 
 ## Tech Stack
-* Node /Express
+* Node / Express
 * React
 
 ## Task:
 (The basic file structure has been provided)
 ### Back-end:
 1. Set up a node server and serve up a static file pointing to your application.
-2. Seed dummy data (see below for the movie schema);
-3. Write routes and controllers for your server to interact with your database. At minimum we would like to see pages where a user can:
+2. Write routes and controllers for your server to interact with your database. At minimum we would like to see pages where a user can:
     * Post a movie to the database
-    * Get all movies to the database
+    * Get all movies (use the "movies.json" file as a starting point)
 ### Front-end:
-4. Set up the following routes:
-    * Add movie page
-    * View all movies
-5. Render front end components to utilize your routes.
+3. Set up the following routes:
+    * Add movie
+    * View movies
+4. Render front end components to utilize your routes.
 
 ## Extra
 If you feel like you want to add more, here are some extra ideas...
