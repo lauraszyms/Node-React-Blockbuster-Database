@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Black Panther",
+    "rating": "7.6",
+    "yearOfRelase": 2018
+  },
+  {
+    "title": "2001: A Space Odyssey",
+    "rating": "8.3",
+    "yearOfRelase": 1968
+  },
+  {
+    "title": "10 Things I Hate About You",
+    "rating": "7.3",
+    "yearOfRelase": 1999
+  },
+  {
+    "title": "Big Hero 6",
+    "rating": "7.8",
+    "yearOfRelase": 2014
+  },
+  {
+    "title": "The Duellists",
+    "rating": "7.5",
+    "yearOfRelase": 1977
+  }
+]
