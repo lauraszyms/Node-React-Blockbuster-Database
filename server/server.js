@@ -33,6 +33,20 @@ app.get('/api/movies/:id', (req, res) => {
   res.send(movie)
 });
 
+app.put('/api/movies/:id', (req, res) => {
+  const movie = movies.find(m => m.id === parseInt(req.params.id));
+  if (!movie) return res.status(404).send('The movie with the given ID was not found.')
+
+  const { error } = validateMovie(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
+  movie.title = req.body.title;
+  movie.rating = req.body.rating;
+  movie.yearOfRelease = req.body.yearOfRelease;
+
+  res.send(movie);
+});
+
 
 
 const port = process.env.PORT || 5000;
