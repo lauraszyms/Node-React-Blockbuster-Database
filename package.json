@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/Deep6AI/D6CodingChallenge/issues"
   },
-  "homepage": "https://github.com/Deep6AI/D6CodingChallenge#readme"
+  "dependencies": {
+    "express": "^4.16.3",
+    "joi": "^13.3.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  },
+  "homepage": "https://github.com/Deep6AI/D6CodingChallenge#readme",
+  "devDependencies": {}
 }
