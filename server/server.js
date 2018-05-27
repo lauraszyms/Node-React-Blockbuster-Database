@@ -27,6 +27,12 @@ app.post('/api/movies', (req, res) => {
   res.send(movie);
 });
 
+app.get('/api/movies/:id', (req, res) => {
+  const movie = movies.find(c => c.id === parseInt(req.params.id));
+  if (!movie) return res.status(404).send('The movie with the given ID was not found.')
+  res.send(movie)
+});
+
 
 
 const port = process.env.PORT || 5000;
