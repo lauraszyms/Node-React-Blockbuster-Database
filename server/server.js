@@ -6,8 +6,12 @@ const movies = require('../data/movies')
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send('Welcome to Blockbuster!')
-  });
+  res.send('Welcome to Blockbuster!')
+});
+
+app.get('/api/movies', (req, res) => {
+  res.send(movies)
+});
 
 
 const port = process.env.PORT || 5000;
