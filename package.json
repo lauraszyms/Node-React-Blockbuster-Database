@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/Deep6AI/D6CodingChallenge#readme",
   "devDependencies": {
-    "nodemon": "^1.17.5",
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.5"
   }
 }
