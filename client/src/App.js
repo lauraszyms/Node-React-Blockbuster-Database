@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Movies from './Components/Movies'
+import AddMovie from './Components/AddMovie'
 
 class App extends Component {
 
@@ -25,11 +26,18 @@ class App extends Component {
     this.getMovies();
   };
 
+  handleAddMovie(movie) {
+    let movies = this.state.movies;
+    movies.push(movie);
+    this.setState({movies: movies});
+  };
+
   render() {
     return (
       <div className="App">
        Welcome to Blockbuster!
        < Movies movies={this.state.movies} />
+       < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
       </div>
     );
   }
