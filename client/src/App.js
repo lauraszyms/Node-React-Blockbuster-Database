@@ -26,10 +26,19 @@ class App extends Component {
   };
 
   handleAddMovie(movie) {
-    let movies = this.state.movies;
-    movies.push(movie);
-    this.setState({movies: movies});
-  };
+    fetch('http://localhost:5000/api/movies', {
+      method: 'POST',
+      mode: 'CORS',
+      headers: {
+        'Content-Type': 'application/json'
+       },
+      body: JSON.stringify(movie)
+    }).then(res => res.json())
+      .catch(err => err);
+      let movies = this.state.movies;
+      movies.push(movie);
+      this.setState({movies: movies});
+    };
 
   handleDeleteMovie(id) {
     let movies = this.state.movies;

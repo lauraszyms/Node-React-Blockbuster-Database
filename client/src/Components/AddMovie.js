@@ -9,14 +9,11 @@ class AddMovie extends Component {
   };
 
   handleSubmit(e) {
-    let idCounter = this.props.movies.length + 1
     this.setState({newMovie: {
-      id: idCounter++,
       title: this.refs.title.value,
       rating: this.refs.rating.value,
       yearOfRelease: this.refs.release.value
     }}, function() {
-      // console.log(this.state)
       this.props.addMovie(this.state.newMovie)
     });
     e.preventDefault();
