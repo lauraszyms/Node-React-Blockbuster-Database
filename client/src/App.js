@@ -1,13 +1,46 @@
 import React, { Component } from 'react';
 import Movies from './Components/Movies'
 import AddMovie from './Components/AddMovie'
+import Modal from 'react-modal';
+
+
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
 
 class App extends Component {
   constructor(){
     super();
     this.state = {
-     movies: []
+     movies: [],
+     modalIsOpen: false
    }
+
+   this.openModal = this.openModal.bind(this);
+   this.afterOpenModal = this.afterOpenModal.bind(this);
+   this.closeModal = this.closeModal.bind(this);
+  };
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  };
+
+  afterOpenModal() {
+  // references are now sync'd and can be accessed.
+   this.subtitle.style.color = '#f00';
+  };
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
   };
 
   getMovies() {
@@ -69,8 +102,17 @@ class App extends Component {
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
                 <div className="blog-thumb">
                   <a href="#"><h1>Add a Movie to the Database</h1></a>
-                  < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
-                  <a href="#" className="btn btn-default">Add Movie</a>
+                  <button onClick={this.openModal}><a href="#" className="btn btn-default">Add Movie</a></button>
+                  <Modal
+                    isOpen={this.state.modalIsOpen}
+                    onAfterOpen={this.afterOpenModal}
+                    onRequestClose={this.closeModal}
+                    style={customStyles}
+                    contentLabel="Form Modal">
+                    <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
+                    < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
+                    <button onClick={this.closeModal}>close</button>
+                  </Modal>
                 </div>
               </div>
 
