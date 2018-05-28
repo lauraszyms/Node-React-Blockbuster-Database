@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Movies from './Components/Movies'
 import AddMovie from './Components/AddMovie'
 import Modal from 'react-modal';
+import { Link } from 'react-router-dom';
 
 
 
@@ -95,14 +96,14 @@ class App extends Component {
 
                  <a href="#"><h1>Blockbuster Video Movie List</h1></a>
                  <h3>Recent Additions:</h3>
-                   < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
-                  <a href="#" className="btn btn-default">Full List</a>
-
-              </div>
+                < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/>
+                 <Link to="/movie-list" className="btn btn-default" Movies movies={this.state.movies}>Entire List</Link>
+                </div>
 
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
 
                   <a href="#"><h1>Add a Movie to the Database</h1></a>
+                  <p>Add a movie to our open source movie database! You will need the title, a rating from 1-10, and the year in which the movie was released. Thank you for contributing!</p>
                   <a href="#" className="btn btn-default" onClick={this.openFormModal}>Add Movie</a>
                   <Modal
                     isOpen={this.state.formModalIsOpen}

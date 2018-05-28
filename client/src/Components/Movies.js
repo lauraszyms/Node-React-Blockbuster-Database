@@ -9,6 +9,7 @@ class Movies extends Component {
   render() {
     let movieItems;
     if (this.props.movies) {
+      console.log(this.props.movies)
       movieItems = this.props.movies.map(movie => {
         return < MovieItem onDelete={this.deleteMovie.bind(this)} key={movie.id} movie={movie} />
       });

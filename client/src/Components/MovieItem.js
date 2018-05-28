@@ -9,7 +9,7 @@ class MovieItem extends Component {
   render() {
     return (
       <li className="Movie">
-       <strong>{this.props.movie.title}</strong> ({this.props.movie.yearOfRelease}) <a href="#" onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small>delete</small></a>
+       <strong>{this.props.movie.title}</strong> ({this.props.movie.yearOfRelease}) <a href="#" onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small></small></a>
       </li>
     );
   }
