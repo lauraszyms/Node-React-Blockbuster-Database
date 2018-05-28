@@ -22,16 +22,17 @@ class App extends Component {
     super();
     this.state = {
      movies: [],
-     modalIsOpen: false
+     formModalIsOpen: false
    }
 
-   this.openModal = this.openModal.bind(this);
+
+   this.openFormModal = this.openFormModal.bind(this);
    this.afterOpenModal = this.afterOpenModal.bind(this);
    this.closeModal = this.closeModal.bind(this);
   };
 
-  openModal() {
-    this.setState({modalIsOpen: true});
+  openFormModal() {
+    this.setState({formModalIsOpen: true});
   };
 
   afterOpenModal() {
@@ -40,7 +41,7 @@ class App extends Component {
   };
 
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.setState({formModalIsOpen: false});
   };
 
   getMovies() {
@@ -91,29 +92,29 @@ class App extends Component {
             <div className="row">
 
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6s">
-               <div className="blog-thumb">
+
                  <a href="#"><h1>Blockbuster Video Movie List</h1></a>
                  <h3>Recent Additions:</h3>
-                 < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
-                 <a href="#" className="btn btn-default">All Movies</a>
-                </div>
+                   < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
+                  <a href="#" className="btn btn-default">Full List</a>
+
               </div>
 
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
-                <div className="blog-thumb">
+
                   <a href="#"><h1>Add a Movie to the Database</h1></a>
-                  <button onClick={this.openModal}><a href="#" className="btn btn-default">Add Movie</a></button>
+                  <a href="#" className="btn btn-default" onClick={this.openFormModal}>Add Movie</a>
                   <Modal
-                    isOpen={this.state.modalIsOpen}
+                    isOpen={this.state.formModalIsOpen}
                     onAfterOpen={this.afterOpenModal}
                     onRequestClose={this.closeModal}
                     style={customStyles}
                     contentLabel="Form Modal">
                     <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
                     < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
-                    <button onClick={this.closeModal}>close</button>
+                    <button className="btn btn-default" onClick={this.closeModal}>close</button>
                   </Modal>
-                </div>
+
               </div>
 
            </div>
