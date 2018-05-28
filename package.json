@@ -24,6 +24,7 @@
     "joi": "^13.3.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
+    "react-js-pagination": "^3.0.2",
     "react-modal": "^3.4.4",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
