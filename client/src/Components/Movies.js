@@ -6,11 +6,20 @@ class Movies extends Component {
     this.props.onDelete(id);
   };
 
+
+
   render() {
+    function compare(a,b) {
+       if (a.title < b.title)
+        return -1;
+       if (a.title > b.title)
+        return 1;
+      return 0;
+    };
+
     let movieItems;
     if (this.props.movies) {
-      console.log(this.props.movies)
-      movieItems = this.props.movies.map(movie => {
+      movieItems = this.props.movies.sort(compare).map(movie => {
         return < MovieItem onDelete={this.deleteMovie.bind(this)} key={movie.id} movie={movie} />
       });
     };
