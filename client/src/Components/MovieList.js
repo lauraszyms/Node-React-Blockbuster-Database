@@ -68,8 +68,10 @@ class MovieList extends Component {
         <section id="movies">
           <div className="container">
             <div className="row">
-             <div className="wow fadeInUp col-md-15 col-sm-15" data-wow-delay="1.6s">
+             <div className="wow fadeInUp col-md-15 col-sm-15" data-wow-delay="1s">
               <h1> Blockbuster Video Database </h1><br/>
+              <Link to="/" className="btn btn-default">Add a Movie</Link>
+              <h3>Movies A-Z </h3>
               < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
               <Pagination
                 activePage={this.state.activePage}

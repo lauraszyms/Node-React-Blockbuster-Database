@@ -92,15 +92,15 @@ class App extends Component {
           <div className="container">
             <div className="row">
 
-              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6s">
+              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="2s">
 
                  <a href="#"><h1>Blockbuster Video Movie List</h1></a>
                  <h3>Recent Additions:</h3>
                 < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/>
-                 <Link to="/movie-list" className="btn btn-default" Movies movies={this.state.movies}>Entire List</Link>
+                 <Link to="/movie-list" className="btn btn-default">Entire List</Link>
                 </div>
 
-              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
+              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="2s">
 
                   <a href="#"><h1>Add a Movie to the Database</h1></a>
                   <p>Add a movie to our open source movie database! You will need the title, a rating from 1-10, and the year in which the movie was released. Thank you for contributing!</p>
