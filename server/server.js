@@ -2,7 +2,9 @@ const Joi = require('joi');
 const express = require('express');
 const app = express();
 const movies = require('../data/movies')
+const cors = require('cors')
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
