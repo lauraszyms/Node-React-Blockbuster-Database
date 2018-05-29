@@ -6,8 +6,6 @@ class Movies extends Component {
     this.props.onDelete(id);
   };
 
-
-
   render() {
     function compare(a,b) {
        if (a.title < b.title)

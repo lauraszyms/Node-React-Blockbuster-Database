@@ -29,6 +29,10 @@ class MovieList extends Component {
       this.getMovies();
     };
 
+    componentWillUpdate() {
+     this.getMovies();
+    };
+
     handlePageChange(pageNumber) {
      console.log(`active page is ${pageNumber}`);
      this.setState({activePage: pageNumber});
@@ -44,9 +48,6 @@ class MovieList extends Component {
         body: JSON.stringify(movie)
       }).then(res => res.json())
         .catch(err => err);
-        let movies = this.state.movies;
-        movies.push(movie);
-        this.setState({movies: movies});
       };
 
     handleDeleteMovie(id) {
@@ -54,10 +55,6 @@ class MovieList extends Component {
         method: 'delete'
       }).then(response => response.json())
        .catch(err => err);
-      let movies = this.state.movies;
-      let index = movies.findIndex(i => i.id === id);
-      movies.splice(index, 1);
-      this.setState({movies: movies});
     };
 
 

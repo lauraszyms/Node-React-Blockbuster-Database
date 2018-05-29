@@ -37,7 +37,6 @@ class App extends Component {
   };
 
   afterOpenModal() {
-  // references are now sync'd and can be accessed.
    this.subtitle.style.color = '#f00';
   };
 
@@ -59,6 +58,10 @@ class App extends Component {
     this.getMovies();
   };
 
+  componentWillUpdate() {
+   this.getMovies();
+  };
+
   handleAddMovie(movie) {
     fetch('http://localhost:5000/api/movies', {
       method: 'POST',
@@ -69,9 +72,6 @@ class App extends Component {
       body: JSON.stringify(movie)
     }).then(res => res.json())
       .catch(err => err);
-      let movies = this.state.movies;
-      movies.push(movie);
-      this.setState({movies: movies});
     };
 
   handleDeleteMovie(id) {
@@ -79,10 +79,6 @@ class App extends Component {
       method: 'delete'
     }).then(response => response.json())
      .catch(err => err);
-    let movies = this.state.movies;
-    let index = movies.findIndex(i => i.id === id);
-    movies.splice(index, 1);
-    this.setState({movies: movies});
   };
 
   render() {

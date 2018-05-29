@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class MovieItem extends Component {
 
@@ -9,7 +10,7 @@ class MovieItem extends Component {
   render() {
     return (
       <li className="Movie">
-       <strong>{this.props.movie.title}</strong> ({this.props.movie.yearOfRelease}) <a href="#" onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small></small></a>
+       <strong>{this.props.movie.title}</strong> ({this.props.movie.yearOfRelease}) <Link to="/" onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small>delete</small></Link>
       </li>
     );
   }
