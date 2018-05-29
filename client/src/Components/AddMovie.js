@@ -22,7 +22,8 @@ class AddMovie extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit.bind(this)}>
+        <section id="movies">
+         <form onSubmit={this.handleSubmit.bind(this)}>
           <div>
             <lable>Title</lable><br/>
             <input type="text" ref="title" />
@@ -35,8 +36,9 @@ class AddMovie extends Component {
            <lable>Year of Release</lable><br/>
            <input type="text" ref="release" />
          </div>
-           <input type="submit" value="Submit" />
+           <button input type="submit">Save</button>
         </form>
+       </section>
       </div>
     );
   }

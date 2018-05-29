@@ -72,6 +72,7 @@ class App extends Component {
       body: JSON.stringify(movie)
     }).then(res => res.json())
       .catch(err => err);
+      this.closeModal();
     };
 
   handleDeleteMovie(id) {
@@ -92,7 +93,7 @@ class App extends Component {
 
                  <a href="#"><h1>Blockbuster Video Movie List</h1></a>
                  <h3>Recent Additions:</h3>
-                < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/>
+                < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/><br/>
                  <Link to="/movie-list" className="btn btn-default">Entire List</Link>
                 </div>
 
@@ -109,7 +110,7 @@ class App extends Component {
                     contentLabel="Form Modal">
                     <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
                     < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
-                    <button className="btn btn-default" onClick={this.closeModal}>close</button>
+                    <button className="btn btn-default" onClick={this.closeModal}>cancel</button>
                   </Modal>
 
               </div>
