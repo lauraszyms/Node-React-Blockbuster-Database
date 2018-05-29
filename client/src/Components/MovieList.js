@@ -18,18 +18,11 @@ class MovieList extends Component {
       fetch('http://localhost:5000/api/movies')
         .then(res => res.json())
         .then(movies => this.setState({movies: movies}))
-    };
-
-    componentWillMount() {
-     this.getMovies();
+        .catch(err => err);
     };
 
     componentDidMount() {
       this.getMovies();
-    };
-
-    componentWillUpdate() {
-     this.getMovies();
     };
 
     handleAddMovie(movie) {
@@ -42,6 +35,7 @@ class MovieList extends Component {
         body: JSON.stringify(movie)
       }).then(res => res.json())
         .catch(err => err);
+        this.getMovies();
       };
 
     handleDeleteMovie(id) {
@@ -49,6 +43,8 @@ class MovieList extends Component {
         method: 'delete'
       }).then(response => response.json())
        .catch(err => err);
+       this.getMovies();
+       console.log(this.state.movies)
     };
 
 

@@ -4,6 +4,8 @@ import AddMovie from './Components/AddMovie'
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
 
+Modal.setAppElement(App);
+
 
 
 const customStyles = {
@@ -24,13 +26,13 @@ class App extends Component {
     this.state = {
      movies: [],
      formModalIsOpen: false
-   }
+  };
 
 
    this.openFormModal = this.openFormModal.bind(this);
    this.afterOpenModal = this.afterOpenModal.bind(this);
    this.closeModal = this.closeModal.bind(this);
-  };
+};
 
   openFormModal() {
     this.setState({formModalIsOpen: true});
@@ -48,18 +50,12 @@ class App extends Component {
     fetch('http://localhost:5000/api/movies')
       .then(res => res.json())
       .then(movies => this.setState({movies: movies}))
-  };
-
-  componentWillMount() {
-   this.getMovies();
+      .catch(err => err);
+      console.log(this.state.movies)
   };
 
   componentDidMount() {
     this.getMovies();
-  };
-
-  componentWillUpdate() {
-   this.getMovies();
   };
 
   handleAddMovie(movie) {
@@ -72,14 +68,16 @@ class App extends Component {
       body: JSON.stringify(movie)
     }).then(res => res.json())
       .catch(err => err);
+      this.getMovies();
       this.closeModal();
     };
 
-  handleDeleteMovie(id) {
+   handleDeleteMovie(id) {
     fetch('http://localhost:5000/api/movies' + '/' + id, {
       method: 'delete'
     }).then(response => response.json())
      .catch(err => err);
+     this.getMovies()
   };
 
   render() {
@@ -89,15 +87,15 @@ class App extends Component {
           <div className="container">
             <div className="row">
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
-                <a href="#"><h1>Blockbuster Video Movie List</h1></a>
+                <h1>Blockbuster Video Movie List</h1>
                 <h3>Recent Additions:</h3>
                 < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/><br/>
                 <Link to="/movie-list" className="btn btn-default">Entire List</Link>
               </div>
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
-                <a href="#"><h1>Add a Movie to the Database</h1></a>
+                <h1>Add a Movie to the Database</h1>
                 <p>Add a movie to our open source movie database! You will need the title, a rating from 1-10, and the year in which the movie was released. Thank you for contributing!</p>
-                <a href="#" className="btn btn-default" onClick={this.openFormModal}>Add Movie</a>
+                <div className="btn btn-default" onClick={this.openFormModal}>Add Movie</div>
                 <Modal
                   isOpen={this.state.formModalIsOpen}
                   onAfterOpen={this.afterOpenModal}
