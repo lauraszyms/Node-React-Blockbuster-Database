@@ -3,15 +3,14 @@ import MovieItem from './MovieItem';
 import Movies from './Movies'
 import { Link } from 'react-router-dom';
 import AddMovie from './AddMovie'
-import Pagination from "react-js-pagination";
+
 
 
 class MovieList extends Component {
     constructor(){
       super();
       this.state = {
-       movies: [],
-       activePage: 1
+       movies: []
      };
     };
 
@@ -31,11 +30,6 @@ class MovieList extends Component {
 
     componentWillUpdate() {
      this.getMovies();
-    };
-
-    handlePageChange(pageNumber) {
-     console.log(`active page is ${pageNumber}`);
-     this.setState({activePage: pageNumber});
     };
 
     handleAddMovie(movie) {
@@ -70,13 +64,6 @@ class MovieList extends Component {
               <Link to="/" className="btn btn-default">Add a Movie</Link>
               <h3>Movies A-Z </h3>
               < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
-              <Pagination
-                activePage={this.state.activePage}
-                itemsCountPerPage={10}
-                totalItemsCount={450}
-                pageRangeDisplayed={5}
-                onChange={this.handlePageChange.bind(this)}
-               />
              </div>
             </div>
           </div>

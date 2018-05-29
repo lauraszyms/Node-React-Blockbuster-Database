@@ -88,39 +88,33 @@ class App extends Component {
         <section id="movies">
           <div className="container">
             <div className="row">
-
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
-
-                 <a href="#"><h1>Blockbuster Video Movie List</h1></a>
-                 <h3>Recent Additions:</h3>
+                <a href="#"><h1>Blockbuster Video Movie List</h1></a>
+                <h3>Recent Additions:</h3>
                 < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/><br/>
-                 <Link to="/movie-list" className="btn btn-default">Entire List</Link>
-                </div>
-
-              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
-
-                  <a href="#"><h1>Add a Movie to the Database</h1></a>
-                  <p>Add a movie to our open source movie database! You will need the title, a rating from 1-10, and the year in which the movie was released. Thank you for contributing!</p>
-                  <a href="#" className="btn btn-default" onClick={this.openFormModal}>Add Movie</a>
-                  <Modal
-                    isOpen={this.state.formModalIsOpen}
-                    onAfterOpen={this.afterOpenModal}
-                    onRequestClose={this.closeModal}
-                    style={customStyles}
-                    contentLabel="Form Modal">
-                    <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
-                    < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
-                    <button className="btn btn-default" onClick={this.closeModal}>cancel</button>
-                  </Modal>
-
+                <Link to="/movie-list" className="btn btn-default">Entire List</Link>
               </div>
-
-           </div>
+              <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
+                <a href="#"><h1>Add a Movie to the Database</h1></a>
+                <p>Add a movie to our open source movie database! You will need the title, a rating from 1-10, and the year in which the movie was released. Thank you for contributing!</p>
+                <a href="#" className="btn btn-default" onClick={this.openFormModal}>Add Movie</a>
+                <Modal
+                  isOpen={this.state.formModalIsOpen}
+                  onAfterOpen={this.afterOpenModal}
+                  onRequestClose={this.closeModal}
+                  style={customStyles}
+                  contentLabel="Form Modal">
+                  <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
+                  < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
+                  <button className="btn btn-default" onClick={this.closeModal}>cancel</button>
+                </Modal>
+              </div>
+            </div>
           </div>
         </section>
       </div>
     );
-  }
+  };
 };
 
 export default App;

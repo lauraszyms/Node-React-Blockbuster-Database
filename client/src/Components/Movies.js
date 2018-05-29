@@ -17,7 +17,7 @@ class Movies extends Component {
 
     let movieItems;
     if (this.props.movies) {
-      movieItems = this.props.movies.sort(compare).map(movie => {
+      movieItems = this.props.movies.sort(compare).map((movie, index) => {
         return < MovieItem onDelete={this.deleteMovie.bind(this)} key={movie.id} movie={movie} />
       });
     };
