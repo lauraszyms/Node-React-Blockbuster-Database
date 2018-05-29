@@ -11,7 +11,7 @@ class MovieItem extends Component {
     return (
       <li className="Movie">
        <strong>{this.props.movie.title}</strong> ({this.props.movie.yearOfRelease})<br/>
-       <Link to={window.location.pathname} onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small>| delete |</small></Link>
+       <Link to={window.location.pathname} onClick={this.deleteMovie.bind(this, this.props.movie.id)}><small>| double click - delete |</small></Link>
       </li>
     );
   }
