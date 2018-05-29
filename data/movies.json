@@ -37,204 +37,204 @@
   },
   {
     "id": 7,
-    "title": "2001: A Space Odyssey",
+    "title": "Pretty In Pink",
     "rating": "8.3",
     "yearOfRelease": 1968
   },
   {
     "id": 8,
-    "title": "10 Things I Hate About You",
+    "title": "Home Alone",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 9,
-    "title": "Big Hero 6",
+    "title": "The Breakfast Club",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 10,
-    "title": "The Duellists",
+    "title": "Mermaid",
     "rating": "7.5",
     "yearOfRelease": 1977
   },
   {
     "id": 11,
-    "title": "Black Panther",
+    "title": "Susperia",
     "rating": "7.6",
     "yearOfRelease": 2018
   },
   {
     "id": 12,
-    "title": "2001: A Space Odyssey",
+    "title": "Picnic at Hanging Rock",
     "rating": "8.3",
     "yearOfRelease": 1968
   },
   {
     "id": 13,
-    "title": "10 Things I Hate About You",
+    "title": "It's A Wonderful Life",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 14,
-    "title": "Big Hero 6",
+    "title": "Weird Science",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 15,
-    "title": "The Duellists",
+    "title": "Hackers",
     "rating": "7.5",
     "yearOfRelease": 1977
   },
   {
     "id": 16,
-    "title": "Black Panther",
-    "rating": "7.6",
-    "yearOfRelease": 2018
+    "title": "Bill & Ted's Excellent Adventure",
+    "rating": "10",
+    "yearOfRelease": 1989
   },
   {
     "id": 17,
-    "title": "2001: A Space Odyssey",
-    "rating": "8.3",
-    "yearOfRelease": 1968
+    "title": "Bill & Ted's Bogus Journey",
+    "rating": "10",
+    "yearOfRelease": 1991
   },
   {
     "id": 18,
-    "title": "10 Things I Hate About You",
+    "title": "Scar Face",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 19,
-    "title": "Big Hero 6",
+    "title": "Thirteen",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 20,
-    "title": "The Duellists",
+    "title": "The Secret Garden",
     "rating": "7.5",
     "yearOfRelease": 1977
   },
   {
     "id": 21,
-    "title": "Black Panther",
+    "title": "Now and Then",
     "rating": "7.6",
     "yearOfRelease": 2018
   },
   {
     "id": 22,
-    "title": "2001: A Space Odyssey",
+    "title": "The Goonies",
     "rating": "8.3",
     "yearOfRelease": 1968
   },
   {
     "id": 23,
-    "title": "10 Things I Hate About You",
+    "title": "The Lost Boys",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 24,
-    "title": "Big Hero 6",
+    "title": "The Notebook",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 25,
-    "title": "The Duellists",
+    "title": "Moonlight",
     "rating": "7.5",
     "yearOfRelease": 1977
   },
   {
     "id": 26,
-    "title": "Black Panther",
+    "title": "Jurassic Park",
     "rating": "7.6",
     "yearOfRelease": 2018
   },
   {
     "id": 27,
-    "title": "2001: A Space Odyssey",
+    "title": "The Lost World: Jurassic Park",
     "rating": "8.3",
     "yearOfRelease": 1968
   },
   {
     "id": 28,
-    "title": "10 Things I Hate About You",
+    "title": "The Seven Year Itch",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 29,
-    "title": "Big Hero 6",
+    "title": "His Girl Friday",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 30,
-    "title": "The Duellists",
+    "title": "Westworld",
     "rating": "7.5",
     "yearOfRelease": 1977
   },
   {
     "id": 31,
-    "title": "Black Panther",
+    "title": "Cat on a Hot Tin Roof",
     "rating": "7.6",
     "yearOfRelease": 2018
   },
   {
     "id": 32,
-    "title": "2001: A Space Odyssey",
+    "title": "Gone With the Wind",
     "rating": "8.3",
     "yearOfRelease": 1968
   },
   {
     "id": 33,
-    "title": "10 Things I Hate About You",
+    "title": "Mean Girls",
     "rating": "7.3",
     "yearOfRelease": 1999
   },
   {
     "id": 34,
-    "title": "Big Hero 6",
+    "title": "Heathers",
     "rating": "7.8",
     "yearOfRelease": 2014
   },
   {
     "id": 35,
-    "title": "The Duellists",
+    "title": "Field of Dreams",
     "rating": "7.5",
     "yearOfRelease": 1977
   },  {
       "id": 36,
-      "title": "Black Panther",
+      "title": "Sleepless in Seattle",
       "rating": "7.6",
       "yearOfRelease": 2018
     },
     {
       "id": 37,
-      "title": "2001: A Space Odyssey",
+      "title": "Reality Bites",
       "rating": "8.3",
       "yearOfRelease": 1968
     },
     {
       "id": 38,
-      "title": "10 Things I Hate About You",
+      "title": "While You Were Sleeping",
       "rating": "7.3",
       "yearOfRelease": 1999
     },
     {
       "id": 39,
-      "title": "Big Hero 6",
+      "title": "Empire Records",
       "rating": "7.8",
       "yearOfRelease": 2014
     },
     {
       "id": 40,
-      "title": "The Duellists",
+      "title": "Titanic",
       "rating": "7.5",
       "yearOfRelease": 1977
     }
