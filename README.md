@@ -1,3 +1,12 @@
+#UPDATE
+
+To see my changes please clone the repo then run in terminal:
+
+$ npm install
+$ yarn start
+
+Thanks! 
+
 # Welcome to Deep 6 Blockbuster!
 
 In this coding challenge, we will be asking you to bring Blockbuster back from the dead. You will be required to set up a server, create a RESTful API to read fromt / write to the movie "inventory", and render basic UI views.
