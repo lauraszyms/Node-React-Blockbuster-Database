@@ -3,6 +3,7 @@ import Movies from './Components/Movies'
 import AddMovie from './Components/AddMovie'
 import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
+import UpdateMovie from './Components/UpdateMovie'
 
 Modal.setAppElement(App);
 
@@ -33,6 +34,7 @@ class App extends Component {
    this.afterOpenModal = this.afterOpenModal.bind(this);
    this.closeModal = this.closeModal.bind(this);
 };
+
 
   openFormModal() {
     this.setState({formModalIsOpen: true});
@@ -67,8 +69,8 @@ class App extends Component {
        },
       body: JSON.stringify(movie)
     }).then(res => res.json())
+      .then(movie => this.setState({movies: this.state.movies.concat(movie)}))
       .catch(err => err);
-      this.getMovies();
       this.closeModal();
     };
 
@@ -76,8 +78,8 @@ class App extends Component {
     fetch('http://localhost:5000/api/movies' + '/' + id, {
       method: 'delete'
     }).then(response => response.json())
+      .then(movie => this.setState({movies: this.state.movies.filter(movie => movie.id !== id)}))
      .catch(err => err);
-     this.getMovies()
   };
 
   render() {
