@@ -25,12 +25,18 @@ class MovieList extends Component {
       super();
       this.state = {
        movies: [],
+       formModalIsOpen: false,
        updateModalIsOpen: false,
        updateId: 0
      };
 
+     this.openFormModal = this.openFormModal.bind(this);
      this.afterOpenModal = this.afterOpenModal.bind(this);
      this.closeModal = this.closeModal.bind(this);
+    };
+
+    openFormModal() {
+      this.setState({formModalIsOpen: true});
     };
 
     afterOpenModal() {
@@ -38,7 +44,7 @@ class MovieList extends Component {
     };
 
     closeModal() {
-      this.setState({updateModalIsOpen: false});
+      this.setState({formModalIsOpen: false, updateModalIsOpen: false});
     };
 
     getMovies() {
@@ -51,6 +57,20 @@ class MovieList extends Component {
     componentDidMount() {
       this.getMovies();
     };
+
+    handleAddMovie(movie) {
+      fetch('http://localhost:5000/api/movies', {
+        method: 'POST',
+        mode: 'CORS',
+        headers: {
+          'Content-Type': 'application/json'
+         },
+        body: JSON.stringify(movie)
+      }).then(res => res.json())
+        .then(() => this.getMovies())
+        .catch(err => err);
+        this.closeModal();
+      };
 
     handleId(id) {
       this.setState({updateModalIsOpen: true, updateId: id});
@@ -70,14 +90,13 @@ class MovieList extends Component {
         this.closeModal();
       };
 
-    handleDeleteMovie(id) {
-      fetch('http://localhost:5000/api/movies' + '/' + id, {
-        method: 'delete'
-      }).then(response => response.json())
-       .catch(err => err);
-       this.getMovies();
-       console.log(this.state.movies)
-    };
+      handleDeleteMovie(id) {
+       fetch('http://localhost:5000/api/movies' + '/' + id, {
+         method: 'delete'
+       }).then(response => response.json())
+         .then(() => this.getMovies())
+        .catch(err => err);
+     };
 
 
   render() {
@@ -89,7 +108,17 @@ class MovieList extends Component {
             <div className="row">
              <div className="wow fadeInUp col-md-15 col-sm-15">
               <h1> Blockbuster Video Database </h1><br/>
-              <Link to="/" className="btn btn-default">Add a Movie</Link>
+              <div className="btn btn-default" onClick={this.openFormModal}>Add Movie</div>
+              <Modal
+                isOpen={this.state.formModalIsOpen}
+                onAfterOpen={this.afterOpenModal}
+                onRequestClose={this.closeModal}
+                style={customStyles}
+                contentLabel="Form Modal">
+                <h2 ref={subtitle => this.subtitle = subtitle}>Add A Movie!</h2>
+                < AddMovie movies={this.state.movies} addMovie={this.handleAddMovie.bind(this)}/>
+                <button className="btn btn-default" onClick={this.closeModal}>cancel</button>
+              </Modal>
               <h3>Movies A-Z </h3>
               < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)} onUpdate={this.handleId.bind(this)}/>
               <Modal
