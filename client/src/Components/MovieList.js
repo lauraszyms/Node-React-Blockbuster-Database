@@ -3,6 +3,7 @@ import MovieItem from './MovieItem';
 import Movies from './Movies'
 import { Link } from 'react-router-dom';
 import AddMovie from './AddMovie'
+import UpdateMovie from './UpdateMovie'
 
 
 
@@ -25,18 +26,18 @@ class MovieList extends Component {
       this.getMovies();
     };
 
-    handleAddMovie(movie) {
-      fetch('http://localhost:5000/api/movies', {
-        method: 'POST',
-        mode: 'CORS',
-        headers: {
-          'Content-Type': 'application/json'
-         },
-        body: JSON.stringify(movie)
-      }).then(res => res.json())
-        .catch(err => err);
-        this.getMovies();
-      };
+      handleUpdateMovie(id) {
+        fetch('http://localhost:5000/api/movies' + '/' + id, {
+          method: 'PUT',
+          mode: 'CORS',
+          headers: {
+            'Content-Type': 'application/json'
+           },
+          // body: JSON.stringify(movie)
+        }).then(res => res.json())
+          .catch(err => err);
+          this.getMovies();
+        };
 
     handleDeleteMovie(id) {
       fetch('http://localhost:5000/api/movies' + '/' + id, {
@@ -59,7 +60,7 @@ class MovieList extends Component {
               <h1> Blockbuster Video Database </h1><br/>
               <Link to="/" className="btn btn-default">Add a Movie</Link>
               <h3>Movies A-Z </h3>
-              < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)}/>
+              < Movies movies={this.state.movies} onDelete={this.handleDeleteMovie.bind(this)} onUpdate={this.handleUpdateMovie.bind(this)}/>
              </div>
             </div>
           </div>

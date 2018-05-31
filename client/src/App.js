@@ -26,15 +26,15 @@ class App extends Component {
     super();
     this.state = {
      movies: [],
-     formModalIsOpen: false
+     formModalIsOpen: false,
+     updateModalIsOpen: false,
+     updateId: 0
   };
-
 
    this.openFormModal = this.openFormModal.bind(this);
    this.afterOpenModal = this.afterOpenModal.bind(this);
    this.closeModal = this.closeModal.bind(this);
 };
-
 
   openFormModal() {
     this.setState({formModalIsOpen: true});
@@ -45,7 +45,7 @@ class App extends Component {
   };
 
   closeModal() {
-    this.setState({formModalIsOpen: false});
+    this.setState({formModalIsOpen: false, updateModalIsOpen: false});
   };
 
   getMovies() {
@@ -53,7 +53,6 @@ class App extends Component {
       .then(res => res.json())
       .then(movies => this.setState({movies: movies}))
       .catch(err => err);
-      console.log(this.state.movies)
   };
 
   componentDidMount() {
@@ -69,16 +68,34 @@ class App extends Component {
        },
       body: JSON.stringify(movie)
     }).then(res => res.json())
-      .then(movie => this.setState({movies: this.state.movies.concat(movie)}))
+      .then(() => this.getMovies())
       .catch(err => err);
       this.closeModal();
     };
+
+    handleId(id) {
+      this.setState({updateModalIsOpen: true, updateId: id});
+    }
+
+    handleUpdateMovie(movie) {
+      fetch('http://localhost:5000/api/movies' + '/' + this.state.updateId, {
+        method: 'PUT',
+        mode: 'CORS',
+        headers: {
+          'Content-Type': 'application/json'
+         },
+        body: JSON.stringify(movie)
+      }).then(res => res.json())
+        .then(() => this.getMovies())
+        .catch(err => err);
+        this.closeModal();
+      };
 
    handleDeleteMovie(id) {
     fetch('http://localhost:5000/api/movies' + '/' + id, {
       method: 'delete'
     }).then(response => response.json())
-      .then(movie => this.setState({movies: this.state.movies.filter(movie => movie.id !== id)}))
+      .then(() => this.getMovies())
      .catch(err => err);
   };
 
@@ -91,7 +108,17 @@ class App extends Component {
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
                 <h1>Blockbuster Video Movie List</h1>
                 <h3>Recent Additions:</h3>
-                < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)}/><br/>
+                < Movies movies={this.state.movies.slice(-5)} onDelete={this.handleDeleteMovie.bind(this)} onUpdate={this.handleId.bind(this)}/><br/>
+                <Modal
+                  isOpen={this.state.updateModalIsOpen}
+                  onAfterOpen={this.afterOpenModal}
+                  onRequestClose={this.closeModal}
+                  style={customStyles}
+                  contentLabel="Form Modal">
+                  <h2 ref={subtitle => this.subtitle = subtitle}>Update this Movie!</h2>
+                  < UpdateMovie movies={this.state.movies} updateMovie={this.handleUpdateMovie.bind(this)}/>
+                  <button className="btn btn-default" onClick={this.closeModal}>cancel</button>
+                </Modal>
                 <Link to="/movie-list" className="btn btn-default">Entire List</Link>
               </div>
               <div className="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1.6">
