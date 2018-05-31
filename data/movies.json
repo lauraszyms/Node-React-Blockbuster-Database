@@ -135,61 +135,61 @@
     "id": 23,
     "title": "The Lost Boys",
     "rating": "7.3",
-    "yearOfRelease": 1987
+    "yearOfRelease": 1988
   },
   {
     "id": 24,
     "title": "The Notebook",
     "rating": "7.8",
-    "yearOfRelease": 2004
+    "yearOfRelease": 1999
   },
   {
     "id": 25,
     "title": "Moonlight",
     "rating": "7.5",
-    "yearOfRelease": 2016
+    "yearOfRelease": 1999
   },
   {
     "id": 26,
     "title": "Jurassic Park",
     "rating": "7.6",
-    "yearOfRelease": 1993
+    "yearOfRelease": 1999
   },
   {
     "id": 27,
     "title": "The Lost World: Jurassic Park",
     "rating": "8.3",
-    "yearOfRelease": 1997
+    "yearOfRelease": 1999
   },
   {
     "id": 28,
     "title": "The Seven Year Itch",
     "rating": "7.3",
-    "yearOfRelease": 1955
+    "yearOfRelease": 1999
   },
   {
     "id": 29,
     "title": "His Girl Friday",
     "rating": "7.8",
-    "yearOfRelease": 1940
+    "yearOfRelease": 1999
   },
   {
     "id": 30,
     "title": "Westworld",
     "rating": "7.5",
-    "yearOfRelease": 1973
+    "yearOfRelease": 1999
   },
   {
     "id": 31,
     "title": "Cat on a Hot Tin Roof",
     "rating": "7.6",
-    "yearOfRelease": 1958
+    "yearOfRelease": 1999
   },
   {
     "id": 32,
     "title": "Gone With the Wind",
     "rating": "8.3",
-    "yearOfRelease": 1939
+    "yearOfRelease": 1999
   },
   {
     "id": 33,
@@ -201,41 +201,41 @@
     "id": 34,
     "title": "Heathers",
     "rating": "7.8",
-    "yearOfRelease": 1989
+    "yearOfRelease": 1999
   },
   {
     "id": 35,
     "title": "Field of Dreams",
     "rating": "7.5",
-    "yearOfRelease": 1989
+    "yearOfRelease": 1999
   },  {
       "id": 36,
       "title": "Sleepless in Seattle",
       "rating": "7.6",
-      "yearOfRelease": 1993
+      "yearOfRelease": 1999
     },
     {
       "id": 37,
       "title": "Reality Bites",
       "rating": "8.3",
-      "yearOfRelease": 1994
+      "yearOfRelease": 1996
     },
     {
       "id": 38,
       "title": "While You Were Sleeping",
       "rating": "7.3",
-      "yearOfRelease": 1995
+      "yearOfRelease": 1999
     },
     {
       "id": 39,
       "title": "Empire Records",
       "rating": "7.8",
-      "yearOfRelease": 1995
+      "yearOfRelease": 1996
     },
     {
       "id": 40,
       "title": "Titanic",
       "rating": "7.5",
-      "yearOfRelease": 1997
+      "yearOfRelease": 1998
     }
 ]
