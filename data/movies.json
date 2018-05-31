@@ -31,63 +31,63 @@
   },
   {
     "id": 6,
-    "title": "Black Panther",
-    "rating": "7.6",
-    "yearOfRelease": 2018
+    "title": "Alice",
+    "rating": "7.5",
+    "yearOfRelease": 1988
   },
   {
     "id": 7,
     "title": "Pretty In Pink",
-    "rating": "8.3",
-    "yearOfRelease": 1968
+    "rating": "6.8",
+    "yearOfRelease": 1986
   },
   {
     "id": 8,
     "title": "Home Alone",
-    "rating": "7.3",
-    "yearOfRelease": 1999
+    "rating": "7.5",
+    "yearOfRelease": 1990
   },
   {
     "id": 9,
     "title": "The Breakfast Club",
-    "rating": "7.8",
-    "yearOfRelease": 2014
+    "rating": "7.9",
+    "yearOfRelease": 1985
   },
   {
     "id": 10,
-    "title": "Mermaid",
-    "rating": "7.5",
-    "yearOfRelease": 1977
+    "title": "Splash",
+    "rating": "6.2",
+    "yearOfRelease": 1984
   },
   {
     "id": 11,
     "title": "Susperia",
-    "rating": "7.6",
-    "yearOfRelease": 2018
+    "rating": "7.5",
+    "yearOfRelease": 1977
   },
   {
     "id": 12,
     "title": "Picnic at Hanging Rock",
-    "rating": "8.3",
-    "yearOfRelease": 1968
+    "rating": "7.6",
+    "yearOfRelease": 1975
   },
   {
     "id": 13,
     "title": "It's A Wonderful Life",
-    "rating": "7.3",
-    "yearOfRelease": 1999
+    "rating": "8.6",
+    "yearOfRelease": 1946
   },
   {
     "id": 14,
     "title": "Weird Science",
-    "rating": "7.8",
-    "yearOfRelease": 2014
+    "rating": "6.6",
+    "yearOfRelease": 1985
   },
   {
     "id": 15,
     "title": "Hackers",
-    "rating": "7.5",
-    "yearOfRelease": 1977
+    "rating": "6.2",
+    "yearOfRelease": 1995
   },
   {
     "id": 16,
@@ -103,139 +103,139 @@
   },
   {
     "id": 18,
-    "title": "Scar Face",
-    "rating": "7.3",
-    "yearOfRelease": 1999
+    "title": "Scarface",
+    "rating": "8.3",
+    "yearOfRelease": 1983
   },
   {
     "id": 19,
     "title": "Thirteen",
-    "rating": "7.8",
-    "yearOfRelease": 2014
+    "rating": "6.8",
+    "yearOfRelease": 2003
   },
   {
     "id": 20,
     "title": "The Secret Garden",
-    "rating": "7.5",
-    "yearOfRelease": 1977
+    "rating": "7.3",
+    "yearOfRelease": 1993
   },
   {
     "id": 21,
     "title": "Now and Then",
     "rating": "7.6",
-    "yearOfRelease": 2018
+    "yearOfRelease": 1995
   },
   {
     "id": 22,
     "title": "The Goonies",
     "rating": "8.3",
-    "yearOfRelease": 1968
+    "yearOfRelease": 1985
   },
   {
     "id": 23,
     "title": "The Lost Boys",
     "rating": "7.3",
-    "yearOfRelease": 1999
+    "yearOfRelease": 1987
   },
   {
     "id": 24,
     "title": "The Notebook",
     "rating": "7.8",
-    "yearOfRelease": 2014
+    "yearOfRelease": 2004
   },
   {
     "id": 25,
     "title": "Moonlight",
     "rating": "7.5",
-    "yearOfRelease": 1977
+    "yearOfRelease": 2016
   },
   {
     "id": 26,
     "title": "Jurassic Park",
     "rating": "7.6",
-    "yearOfRelease": 2018
+    "yearOfRelease": 1993
   },
   {
     "id": 27,
     "title": "The Lost World: Jurassic Park",
     "rating": "8.3",
-    "yearOfRelease": 1968
+    "yearOfRelease": 1997
   },
   {
     "id": 28,
     "title": "The Seven Year Itch",
     "rating": "7.3",
-    "yearOfRelease": 1999
+    "yearOfRelease": 1955
   },
   {
     "id": 29,
     "title": "His Girl Friday",
     "rating": "7.8",
-    "yearOfRelease": 2014
+    "yearOfRelease": 1940
   },
   {
     "id": 30,
     "title": "Westworld",
     "rating": "7.5",
-    "yearOfRelease": 1977
+    "yearOfRelease": 1973
   },
   {
     "id": 31,
     "title": "Cat on a Hot Tin Roof",
     "rating": "7.6",
-    "yearOfRelease": 2018
+    "yearOfRelease": 1958
   },
   {
     "id": 32,
     "title": "Gone With the Wind",
     "rating": "8.3",
-    "yearOfRelease": 1968
+    "yearOfRelease": 1939
   },
   {
     "id": 33,
     "title": "Mean Girls",
     "rating": "7.3",
-    "yearOfRelease": 1999
+    "yearOfRelease": 2004
   },
   {
     "id": 34,
     "title": "Heathers",
     "rating": "7.8",
-    "yearOfRelease": 2014
+    "yearOfRelease": 1989
   },
   {
     "id": 35,
     "title": "Field of Dreams",
     "rating": "7.5",
-    "yearOfRelease": 1977
+    "yearOfRelease": 1989
   },  {
       "id": 36,
       "title": "Sleepless in Seattle",
       "rating": "7.6",
-      "yearOfRelease": 2018
+      "yearOfRelease": 1993
     },
     {
       "id": 37,
       "title": "Reality Bites",
       "rating": "8.3",
-      "yearOfRelease": 1968
+      "yearOfRelease": 1994
     },
     {
       "id": 38,
       "title": "While You Were Sleeping",
       "rating": "7.3",
-      "yearOfRelease": 1999
+      "yearOfRelease": 1995
     },
     {
       "id": 39,
       "title": "Empire Records",
       "rating": "7.8",
-      "yearOfRelease": 2014
+      "yearOfRelease": 1995
     },
     {
       "id": 40,
       "title": "Titanic",
       "rating": "7.5",
-      "yearOfRelease": 1977
+      "yearOfRelease": 1997
     }
 ]
